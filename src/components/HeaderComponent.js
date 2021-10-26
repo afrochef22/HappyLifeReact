@@ -20,8 +20,10 @@ import {
 	DropdownToggle,
 	DropdownMenu,
 	DropdownItem,
+	CardImg,
 } from "reactstrap";
 
+console.log(process.env.REACT_APP_MY_API_KEY)
 class Header extends Component {
 	constructor(props) {
 		super(props);
@@ -38,19 +40,19 @@ class Header extends Component {
 
 	toggleNav() {
 		this.setState({
-			isNavOpen: !this.state.isNavOpen
+			isNavOpen: !this.state.isNavOpen,
 		});
 	}
 
 	toggleModal() {
 		this.setState({
-			isModalOpen: !this.state.isModalOpen
+			isModalOpen: !this.state.isModalOpen,
 		});
 	}
 
 	toggleDropdown() {
 		this.setState({
-			isDropdownOpen: !this.state.isDropdownOpen
+			isDropdownOpen: !this.state.isDropdownOpen,
 		});
 	}
 
@@ -63,13 +65,17 @@ class Header extends Component {
 						<Collapse isOpen={this.state.isNavOpen} navbar>
 							<Nav navbar>
 								<NavItem>
-									<NavLink className="nav-link" to="/home">
-										<i className="fa fa-home fa-lg">Home</i>
-									</NavLink>
+									<Button outline className="nav-link" to="/home">
+										<i className="fa fa-home fa-lg home">Home</i>
+									</Button>
 								</NavItem>
-								<Dropdown  className="dropdown-btn" toggle={this.toggleDropdown} isOpen={this.state.isDropdownOpen}>
-									<DropdownToggle className="dropdown-btn" id="dropdown-basic" >
-                  <i className="fa fa-sort-down fa-lg"> Categories</i>
+								<Dropdown
+									className="dropdown-btn"
+									toggle={this.toggleDropdown}
+									isOpen={this.state.isDropdownOpen}
+								>
+									<DropdownToggle className="dropdown-btn" id="dropdown-basic">
+										<i className="fa fa-sort-down fa-lg"> Categories</i>
 									</DropdownToggle>
 									<DropdownMenu>
 										<DropdownItem href="#">Dive Bars</DropdownItem>
@@ -83,13 +89,25 @@ class Header extends Component {
 							</Nav>
 						</Collapse>
 
-						<span className="navbar-text ml-auto">
+						<NavLink className="navbar-text ml-auto">
 							<Button outline className="login-btn" onClick={this.toggleModal}>
 								<i className="fa fa-sign-in fa-lg" /> Login
 							</Button>
-						</span>
+						</NavLink>
+
+						<NavLink className="navbar-text ml-auto">
+							<Button outline className="login-btn" onClick={this.toggleModal}>
+								Sign Up
+							</Button>
+						</NavLink>
 					</div>
 				</Navbar>
+				<section class="section-images">
+					<img src="../images/img/nightLife2.jpg" alt="night life" />
+					<div class="title">
+						<h1>HappyLife</h1>
+					</div>
+				</section>
 			</React.Fragment>
 		);
 	}

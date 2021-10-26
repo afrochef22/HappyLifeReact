@@ -23,7 +23,7 @@ body {
   color: #fff;
 }
 
-.dropdown-item a {
+.dropdown-item a:hover {
   color:#6e2222
 }
 
@@ -32,4 +32,39 @@ body {
   border-color: #fff;
 }
 
+.nav-link i:hover {
+  cursor: pointer;
+}
 
+/* footer */
+footer {
+  text-align: center;
+  background-color: #6e2222;
+  padding: 20px 0; }
+
+footer p {
+  margin-bottom: 0;
+  color: #fff; }
+
+section img {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  text-align: center; }
+
+.section-images {
+  position: relative; }
+
+  .title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px; }
+  
+  .title h1 {
+    font-size: 4.5rem;
+    color: #fff; }
