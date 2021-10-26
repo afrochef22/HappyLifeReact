@@ -23,7 +23,7 @@ import {
 	CardImg,
 } from "reactstrap";
 
-console.log(process.env.REACT_APP_MY_API_KEY)
+
 class Header extends Component {
 	constructor(props) {
 		super(props);
