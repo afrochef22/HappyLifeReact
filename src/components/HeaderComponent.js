@@ -102,9 +102,9 @@ class Header extends Component {
 						</NavLink>
 					</div>
 				</Navbar>
-				<section class="section-images">
+				<section className="section-images">
 					<img src="../images/img/nightLife2.jpg" alt="night life" />
-					<div class="title">
+					<div className="title">
 						<h1>HappyLife</h1>
 					</div>
 				</section>
